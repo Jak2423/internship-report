@@ -1,4 +1,4 @@
-% Дипломын ажлын загвар 
+% Дипломын ажлын загвар
 % Хөгжүүлэгч М.Золжаргал, Г.Амарсанаа
 % Монгол Улсын Их Сургуулийн Мэдээлэл Компьютерийн Ухааны Тэнхимийн шаардлагад нийцүүлэв
 
@@ -82,9 +82,9 @@
   \begin{minipage}[t][647.0truept][t]{\linewidth}
   \begin{center}
 	\textbf{\@university} \\
-    \textbf{\@faculty}\\ 
+    \textbf{\@faculty}\\
     \textbf{\@department}
-  
+
   \end{center}
   \vspace{\tenblanklines}
   \begin{center}
@@ -92,7 +92,7 @@
   \end{center}
   \vspace{\fiveblanklines}
   \begin{center}
-    \singlespace    
+    \singlespace
     \begin{LARGE}
 		\textbf{\@title}
 	\end{LARGE}
@@ -100,21 +100,21 @@
 	\begin{Large}
 		\textbf{(\@titleEng)}
 	\end{Large}
-	 \\ \ \\	
-		
+	 \\ \ \\
+
     \@programeName
-    
+
     \@degreeName
-    
+
   \end{center}
   \vspace{\tenblanklines}
   \vfill
    \begin{center}
    \doublespace
-   
+
    \@cityName \\
 	 \@gradyear
-   \end{center} 
+   \end{center}
 
 \end{minipage}
 
@@ -127,14 +127,14 @@
   \thispagestyle{empty}
 \begin{minipage}[t][647.0truept][t]{\linewidth}
   \begin{center}
-  	
+
 	\textbf{\@university} \\
-    \textbf{\@faculty}\\ 
+    \textbf{\@faculty}\\
     \textbf{\@department}
-  
+
   \end{center}
   \vspace{\tenblanklines}
-  
+
   \vspace{\fiveblanklines}
   \begin{center}
     \singlespace
@@ -145,29 +145,29 @@
 	\begin{Large}
 		\textbf{(\@titleEng)}
 	\end{Large}
-	 \\ \ \\	
+	 \\ \ \\
      \@programeName
-     
+
 	\@degreeName
   \end{center}
   \vspace{\tenblanklines}
 
 \begin{tabular}{m{4cm} m{4cm} m{15cm}}
-  Удирдагч:	& \underline{\hspace{4cm}} & \@supervisor  \\    
+  Удирдагч:	& \underline{\hspace{4cm}} & \@supervisor  \\
   \\
-  Хамтран удирдагч:	& \underline{\hspace{4cm}} & \@cosupervisor  \\  
-  
+  Хамтран удирдагч:	& \underline{\hspace{4cm}} & \@cosupervisor  \\
+
   \\
   Гүйцэтгэсэн:	& \underline{\hspace{4cm}} & \@authorShort \  (\@sisiId)
   \end{tabular}
-  
+
    \vfill
    \begin{center}
    \doublespace
-   
+
    \@cityName \\
 	 \@gradyear
-   \end{center} 
+   \end{center}
 
 \end{minipage}
 \clearpage
@@ -248,7 +248,7 @@
 \cftsetindents{section}{3.0em}{2.3em}
 \cftsetindents{subsection}{5.3em}{3.2em}
 %
-% Spacing between entries is taken care of by the double-spacing in this 
+% Spacing between entries is taken care of by the double-spacing in this
 % section, so no need for extra space before chapter or part entries.
 %
 \setlength{\cftbeforepartskip}{0truept}
@@ -269,7 +269,7 @@
 \renewcommand{\headrulewidth}{0pt}
 %
 % Get the header on subsequent pages right.
-\renewcommand{\@cfttocstart}{ 
+\renewcommand{\@cfttocstart}{
    \newgeometry{top=1.0in,hmargin=1.25in,height=9.0in,
    includehead,includefoot,letterpaper}%,showcrop,showframe}
 
@@ -290,7 +290,7 @@
 \renewcommand{\listtablename}{ХҮСНЭГТИЙН ЖАГСААЛТ}
 \renewcommand{\cftlottitlefont}{\hfill\normalsize\rm}
 \renewcommand{\cftafterlottitle}{\hfill}
-% 
+%
 % Get the title for the LOF normal sized, centered, and at the right height.
 %
 \setlength{\cftbeforeloftitleskip}{-64.0truept}
@@ -300,9 +300,9 @@
 \renewcommand{\cftloftitlefont}{\hfill\normalsize\rm}
 \renewcommand{\cftafterloftitle}{\hfill}
 
-% 
+%
 % Here is a hack.  The report class automatically adds a bit of extra vertical
-% space between table and figure entries in the LOT and LOF if they are from 
+% space between table and figure entries in the LOT and LOF if they are from
 % different chapters.  I have simply commmented out the lines in the definition
 % of \@chapter which do this.  As far as I can tell, the tocloft package doesn't
 % have a command for this so a hack is necessary.
@@ -358,7 +358,7 @@
 }
 % Numbers chapters, sections, and subsections
 \setcounter{secnumdepth}{2}
-% Center section titles 
+% Center section titles
 \renewcommand{\section}{\@startsection{section}{1}{0 in}{1em}{1em}{\raggedright\large\textbf}}
 % Center and italicize subsection titles
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0 in}{1em}{1em}
@@ -368,7 +368,7 @@
 % This is a bit of a hack.  I couldn't figure out a better way, but surely there
 % is one.  What I want is for the title page of the appendix to appear with
 % just one double space between the words "Appendix A" and the title.  So, here,
-% I redefine the command with our \singlespace command, and then inside the 
+% I redefine the command with our \singlespace command, and then inside the
 % actual appendix, I use \doublespace.  This gets the spacing of the appendix
 % title page right.
 
@@ -378,28 +378,28 @@
    \setcounter{section}{0}%
    \gdef\@chapapp{\appendixname}%
    \gdef\thechapter{\@Alph\c@chapter}
-   
+
    % I added this line.
 
    \singlespace}
-   
+
 \newcommand\conclusion[1]{
 	\newpage
-	\addcontentsline{toc}{part}{\uppercase{#1}}    
+	\addcontentsline{toc}{part}{\uppercase{#1}}
    \begin{huge}
    \textbf{#1}\vspace{\baselineskip}\\
    \end{huge}
 }
 
 %\let\oldbibname\bibname
-%\renewcommand\bibname{Referencewgwees}               
+%\renewcommand\bibname{Referencewgwees}
 %\renewcommand\bibname{
 %\begin{center}\uppercase\expandafter{\oldbibname}\vspace{1em}\end{center}
 %}
 %
 % Fix bibliography header.
 %
-%\renewcommand\bibname{References}                               
+%\renewcommand\bibname{References}
 %\renewcommand\bibsection{
 %\begin{center}\uppercase\expandafter{\bibname}\vspace{1em}\end{center}
 %}
