@@ -30,6 +30,14 @@
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.99,0.99,0.99}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 
 \usepackage{listings}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
@@ -38,15 +46,42 @@
 \captionsetup[table]{belowskip=0.5pt}
 \usepackage{subfiles}
 
+
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Код}
 \renewcommand{\lstlistlistingname}{\lstlistingname ын жагсаалт}
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const, let},
+  keywordstyle=\color{purple}\bfseries,
+  ndkeywords={class, export, boolean, default, throw, implements, import, this},
+  ndkeywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{lightgray}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
 
-\usepackage{color}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.99,0.99,0.99}
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\linespread{0.8}\small\ttfamily
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=3,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b,
+   columns=fullflexible
+}
+
+
 
 \lstdefinestyle{mystyle}{
     basicstyle=\ttfamily\small,
